@@ -37,6 +37,7 @@ namespace ImageParallaxList
             if (!_sliderConvertValueSet && !Double.IsInfinity(ScrollViewer.ScrollableHeight) && !ScrollViewer.ScrollableHeight.Equals(ZeroDouble))
             {
                 var slideValue = this.Image.ActualHeight - this.ImageControl.ActualHeight;
+                //Calculate how much image units we need to slide for 1 sliding unit of the scrollviewer
                 var slideConvert = slideValue/this.ScrollViewer.ScrollableHeight;
 
                 ScrollViewerOffsetConverter.ConvertValue = slideConvert;
